@@ -1,0 +1,125 @@
+<html>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <head>
+        
+
+<script>
+const loginForm = document.querySelector('#login-form');
+const submitBtn = document.querySelector('#login-submit-btn');
+const loadingOverlay = document.querySelector('#loading-overlay');
+submitBtn.addEventListener('click', function() {
+  loadingOverlay.style.display = 'block';
+});
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  //const username = document.querySelector('#username').value;
+  //const password = document.querySelector('#password').value;
+  // your login validation code here
+  setTimeout(function() {
+    loadingOverlay.style.display = '';
+    window.location.href = 'index.html';
+  })
+});
+</script>
+
+
+        <style>
+            body{
+                background-image: url(https://educationtribe.in/wp-content/uploads/2020/07/Library-Management-System.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .card{
+                width:440px;
+                margin-top: 130px;
+                height:350px;
+                background-color: rgb(225, 215, 204);
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            input[type=text]{
+                width:300px;
+            }
+            input[type=password]{
+                width:300px;
+            }
+            p{
+                font-weight: 0;
+                font-size: 13px;
+            }
+            #loading-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: none;
+            }
+            
+
+#loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top-color: #f00;
+  border-top-color: #f00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+        </style>
+
+    </head>
+    <body >
+      
+
+         <!-------------------login animation----------------->
+         <div id="loading-overlay">
+            <div id="loading-spinner"></div>
+          </div>
+
+
+        <div class="m-4">
+            <div class="card" >
+                <div class="card-body">
+                
+            <form id="login-form" method="post">
+                <label > &nbsp &nbsp &nbsp  EMAIL</label><br>
+                &nbsp &nbsp &nbsp <input type="text" placeholder="email" id="username" ><br><br>
+                <label> &nbsp &nbsp &nbsp  PASSWORD</label><br>
+                &nbsp &nbsp &nbsp <input type="password" placeholder="password" id="password" width="200px" id="password"><br><br>
+              <!-------<input type="submit" class="bg-secondary" value="Login">!----->
+              <div class="center"> 
+              &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  <a href="index.html">LOGIN</a></div>
+              
+          </form>
+          
+          <centre><p>If you are a new user <a href="signup.html">signup</a></p></centre>
+          <centre><p>continue with phone number<a href="signup.html">phonenumber</a></p></centre>
+          <centre><p>continue with mail <a href="signup.html">mail</a></p></centre>
+          <centre><p>social media <a href="signup.html">facebook</a></p></centre>
+
+          </div>
+          </div>
+          </div>
+          
+          
+    </body>
+
+  
+</html>
